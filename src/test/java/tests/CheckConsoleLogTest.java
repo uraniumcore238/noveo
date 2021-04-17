@@ -24,7 +24,7 @@ public class CheckConsoleLogTest extends TestBase {
 
         step("Console log shouldn't have errors", () -> {
             String consoleLogs = getConsoleLogs();
-            assertThat(consoleLogs, not(containsString("SEVERE")));
+            assertThat(consoleLogs, not(containsString("WARNING")));
         });
 
 
