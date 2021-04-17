@@ -18,10 +18,10 @@ public class AboutCompanyTest extends TestBase{
 
         step("Open main page", () -> open(""));
 
-        step("Проверка что при переходе на страницу отображается заголовок \"Разрабатываем качественное ПО и проводим независимое тестирование\"", () -> {
+        step("Проверка что при переходе на страницу отображается заголовок \"Качество на международном уровне\"", () -> {
             $("a[href='/about']").click();
-            $(".index-poster h2").shouldHave(text("Разрабатываем"));
-            $(".index-poster p").shouldHave(text("качественное ПО и проводим независимое тестирование"));
+            $(".about-description  .index__title-desc").shouldHave(text("Качество на международном уровне"));
+
         });
     }
 
