@@ -4,15 +4,15 @@ import org.aeonbits.owner.ConfigFactory;
 
 public class ConfigHelper {
 
-    public static String getWebUrl() {
+    public static String getWebUrl(){
         return getWebConfig().webUrl();
     }
 
-    public static String getWebRemoteDriver() {
+
+    public static String getWebRemoteDriver(){
         // https://%s:%s@selenoid.autotests.cloud/wd/hub/
         return String.format(System.getProperty("web.remote.driver"),
-                getWebConfig().webRemoteDriverUser(),
-                getWebConfig().webRemoteDriverPassword());
+        getWebConfig().webRemoteDriverUser(), getWebConfig().webRemoteDriverPassword());
     }
 
     public static boolean isRemoteWebDriver() {
@@ -27,7 +27,11 @@ public class ConfigHelper {
         return getWebVideoStorage() != null;
     }
 
-    private static WebConfig getWebConfig() {
+    public static String getWebRemoteDriverUser(){
+        return getWebConfig().webRemoteDriverUser();
+    }
+
+    private static WebConfig getWebConfig(){
         return ConfigFactory.newInstance().create(WebConfig.class, System.getProperties());
     }
 }
