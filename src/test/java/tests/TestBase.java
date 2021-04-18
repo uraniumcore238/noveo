@@ -27,22 +27,4 @@ public class TestBase {
         closeWebDriver();
     }
 
-//    Iterate to next(particular) window
-//    public void iterateToTheTab(int newTab){
-//        Set<String> ids = driver.getWindowHandles();
-//        Iterator<String> it = ids.iterator();
-//        for(int i=0; i<newTab; i++) {
-//            driver.switchTo().window(it.next());
-//        }
-//        log.info("Go to the " +newTab+ " tab");
-//
-//    }
-
-
-
-
-
-
-
-
 }

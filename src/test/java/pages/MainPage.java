@@ -24,14 +24,19 @@ public class MainPage {
         step("Click on blog button in main menu", () -> {
             $("a[href='https://blog.noveogroup.ru/']").click();
         });
+    }
 
+    public void OpenContactsPage() {
+
+        step("Click on contact button in main menu", () -> {
+            $("a[href='/contact']").click();
+        });
     }
 
     public void OpenNoveoUniversityPage() {
 
         step("Click on Noveo University button in main menu", () -> {
             $("a[href='https://university.noveogroup.ru/']").click();
-//            Selenide.switchTo().window(1);
             Selenide.switchTo().window("Noveo University");
             $("h1").shouldHave(text("Твой путь в IT –"));
 
