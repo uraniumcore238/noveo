@@ -13,7 +13,7 @@ public class AboutCompanyTest extends TestBase{
 
 
     @Test
-    @DisplayName("Check the About company page")
+    @DisplayName("Check About company page")
     void checkTheAboutCompanyPage() {
 
         step("Open main page", () -> open(""));
