@@ -30,7 +30,7 @@ public class MainPage {
     public void OpenNoveoUniversityPage() {
 
         step("Click on Noveo University button in main menu", () -> {
-            $("a[title='Noveo University']").click();
+            $("a[href='https://university.noveogroup.ru/']").click();
             Selenide.switchTo().window(1);
 //            Selenide.switchTo().window("Noveo University");
             $("h1").shouldHave(text("Твой путь в IT –"));
