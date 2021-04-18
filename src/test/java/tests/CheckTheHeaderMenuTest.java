@@ -17,11 +17,11 @@ public class CheckTheHeaderMenuTest extends TestBase {
         step("Open main page", () -> open(""));
 
         step("Header menu should have elements О компании, Вакансии, Noveo University, Блог, Контакты", () -> {
-            $("a[title='О компании']").shouldHave(text("О компании"));
-            $("a[title='Вакансии']").shouldHave(text("Вакансии"));
-            $("a[title='Noveo University']").shouldHave(text("Noveo University"));
-            $("a[title='Блог']").shouldHave(text("Блог"));
-            $("a[title='Контакты']").shouldHave(text("Контакты"));
+            $("a[href='/about']").shouldHave(text("О компании"));
+            $("a[href='/job.noveogroup.ru/").shouldHave(text("Вакансии"));
+            $("a[href='https://university.noveogroup.ru/']").shouldHave(text("Noveo University"));
+            $("a[href='https://blog.noveogroup.ru/']").shouldHave(text("Блог"));
+            $("a[href='https://noveogroup.ru/contact']").shouldHave(text("Контакты"));
         });
 
 
